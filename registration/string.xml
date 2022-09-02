@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">registration</string>
+    <string-array name="planets_array">
+        <item>c</item>
+        <item>java</item>
+        <item>python</item>
+
+    </string-array>
+</resources
