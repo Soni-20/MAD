@@ -5,12 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    RadioGroup radioGroup;
     boolean isAllFieldsChecked = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
                 String s2=t2.getText().toString();
                 String s3=t3.getText().toString();
                 String s4=t4.getText().toString();
+                RadioGroup r1 = (RadioGroup) findViewById(R.id.radiogroup);
+                r1.getCheckedRadioButtonId();
+                CheckBox c1=(CheckBox) findViewById(R.id.checkBox);
+                CheckBox c2=(CheckBox) findViewById(R.id.checkBox1);
+
                 if(s1.equals(""))
                 {
                     Toast.makeText(MainActivity.this, "incomplete field", Toast.LENGTH_SHORT).show();
@@ -44,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
                 if(s4.equals(""))
                 {
                     Toast.makeText(MainActivity.this, "incomplete field", Toast.LENGTH_SHORT).show();
+                }
+                if(r1.getCheckedRadioButtonId()==-1)
+                {
+                    Toast.makeText(MainActivity.this, "not selected", Toast.LENGTH_SHORT).show();
+                }
+                if(!c1.isChecked() && !c2.isChecked())
+                {
+                    Toast.makeText(MainActivity.this, "please check", Toast.LENGTH_SHORT).show();
                 }
             }
         });
