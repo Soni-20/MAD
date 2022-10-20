@@ -1,76 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+MainActivity.x ml	xmlns:tools="http://schemas.android.com/tools"
 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity"
+	android:background="@color/material_dynamic_neutral_varia nt100">
+	
+<ImageView
+	android:id="@+id/cvr"
+	android:layout_width="match_parent"
+	android:layout_height="200dp"
+	android:layout_alignParentTop="true"
+	android:scaleType="centerCrop"
+	android:src="@drawable/cover">
+	
+</ImageView>
+	
+<ImageView
+	android:id="@+id/dp"
+	android:layout_width="180dp"
+	android:layout_height="180dp"
+	android:layout_alignParentLeft="true"
+	android:layout_alignParentRight="true"
+	android:layout_centerHorizontal="true"
+	android:layout_marginTop="100dp"
+	app:srcCompat="@drawable/dp" />
+ 
+	<TextView
+	android:id="@+id/textView"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_below="@+id/dp"
+	android:layout_centerHorizontal="true"
+	android:layout_marginTop="15dp"
+	android:textSize="40dp"
+	android:text="Raichal"
+	android:textStyle="bold"
+	/>
+	
 
-    <EditText
-        android:id="@+id/emailorphone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="15"
-        android:gravity="center"
-        android:hint="emailaddress or phone"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+<Button
+	android:id="@+id/b1"
+	android:layout_width="150dp"
+	android:layout_height="wrap_content"
+	android:drawableLeft="@android:drawable/ic_menu_add"
+	android:text="Add to story"
+	android:backgroundTint="#0000FF"
+	android:layout_below="@+id/textView"
+	android:layout_marginLeft="10dp"
+	android:layout_marginTop="30dp"/>
+	
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="15"
-        android:hint="password"
-        android:textAlignment="center"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
+<Button
+	android:id="@+id/button"
+	android:layout_width="150dp"
+	android:layout_height="wrap_content"
+ 
+	android:text="Edit profile"
+	android:drawableLeft="@android:drawable/ic_menu_edit"
+	android:layout_below="@+id/textView"
+	android:layout_toRightOf="@+id/b1"
+	android:layout_marginLeft="10dp"
+	android:layout_marginTop="30dp"
+	android:backgroundTint="#CCCCCC"/>
+	
+<ImageButton
+	android:id="@+id/imageButton4"
+	android:layout_width="wrap_content"
+	android:layout_height="55dp"
+	android:layout_toEndOf="@+id/button"
+	android:layout_below="@+id/textView"
+	android:layout_marginLeft="10dp"
+	android:layout_marginTop="30dp"
+	android:backgroundTint="#CCCCCC"
+	app:srcCompat="@android:drawable/ic_menu_sort_by_size"
+/>
+	
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="17"
-        android:text="LOGIN"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.383"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537" />
+<Button
+	android:id="@+id/button2"
+	android:layout_width="150dp"
+	android:layout_height="wrap_content"
+	android:text="Logout"
+	android:layout_alignParentBottom="true"
+	android:drawableLeft="@android:drawable/ic_lock_power_of f"
+ 
+	android:backgroundTint="@color/teal_700"
+	android:layout_centerHorizontal="true"
+	android:layout_marginBottom="10dp"/>
+	
 
-    <Button
-        android:id="@+id/createaccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="create account"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.397"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="309dp"
-        android:layout_height="76dp"
-        android:layout_marginEnd="48dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073"
-        app:srcCompat="@drawable/facebook" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+import androidx.appcompat.app.AppCompatActivity;
+	
+import android.content.Intent;
+	import android.os.Bundle;
+	import android.view.View;
+	import android.widget.EditText;
+	import android.widget.Toast;
+	
+public class MainActivity extends AppCompatActivity {
+	EditText e1,e2;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+	setContentView(R.layout.activity_main);
+	e1=(EditText)findViewById(R.id.ph);
+	e2=(EditText)findViewById(R.id.pass);
+	}
+	public void login(View view) {
+	
+String usr = e1.getText().toString().trim();
+	String psw = e2.getText().toString().trim();
+	
+if (usr.equals("")) {
+	Toast.makeText(this, "Enter phone or mail", Toast.LENGTH_SHORT).show();
+ 
+	} else if (psw.equals("")) {
+	Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show();
+	}
+	
+else {
+	Intent in=new Intent(this,Activity3.class);
+	startActivity(in);
+	}
+	}
+	public void create(View view){
+	Intent crt=new Intent(this,Activity2.class);
+	startActivity(crt);
+	}
+	}
